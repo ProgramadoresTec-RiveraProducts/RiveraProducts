@@ -42,14 +42,13 @@ body{
     
     .buttons1{
         margin-left: 86px;
-        
         width: 50%;
         height: 40px;
         background: rgb(0, 94, 0);
         border: none;
         color: #ffffff;
         margin-bottom: 12px;
-    
+        border-radius: 10px;
     }
     
     .buttons2{
@@ -60,7 +59,7 @@ body{
         border: none;
         color: #ffffff;
         margin-bottom: 12px;
-        
+        border-radius: 10px;
     }
     
     .form-login p{
