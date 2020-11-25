@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial;
+    background-image:url(fondo.png)
+}
+.form-login{
+width: 400px;
+height: 470px;
+background-color: white;
+margin: auto;
+margin-top: 180px;
+box-shadow: 7px 13px 37px #000;
+padding: 20px 30px;
+border-top: 20px solid rgb(0, 107, 0);
+
+
+}
+.form-login h5 {
+    margin: 0;
+    text-align: center;
+    height: 40px;
+    margin-bottom: 30px;
+    border-bottom: 2px solid;
+    font-size: 25px;
+    
+}
+
+.controls{
+width: 100%;
+border: 1px solid;
+margin-bottom: 15px;
+padding: 11px 10px;
+background: #cfc1c1;
+font-size: 14px;
+font-weight: bold;
+}
+
+.buttons1{
+    margin-left: 86px;
+    
+    width: 50%;
+    height: 40px;
+    background: rgb(0, 94, 0);
+    border: none;
+    color: #ffffff;
+    margin-bottom: 12px;
+
+}
+
+.buttons2{
+    margin-left: 86px;
+    width: 50%;
+    height: 40px;
+    background:  rgb(0, 94, 0);
+    border: none;
+    color: #ffffff;
+    margin-bottom: 12px;
+    
+}
+
+.form-login p{
+    height: 40px;
+    text-align: center;
+}
+.form-login a{
+    color: black;
+    font-size: 14px;
+}
