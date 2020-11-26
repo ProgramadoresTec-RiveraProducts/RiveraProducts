@@ -12,7 +12,7 @@ body{
 /*Sirve para centrar el contenido*/
 .wrapper{
     width:90%;
-    max-width:1000px;
+    max-width:10000px;
     margin:auto;
     overflow:hidden; /*Lo que no cabe en el div no aparece, ver propiedad css overflow*/
   }
@@ -40,7 +40,7 @@ body{
     font-weight:bold;
     -webkit-transition:all 100ms ease;
     -o-transition:all 500ms ease;
-    transition:all 500ms ease;
+    transition:all 600ms ease;
   }
   
   header nav a:hover{
