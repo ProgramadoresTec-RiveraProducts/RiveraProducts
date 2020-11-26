@@ -24,10 +24,9 @@
                   <!-- Correo eléctronico -->
                 <input class="controls" type="text" name="correoE" value="" placeholder="Correo eléctronico">
                 <!-- Contraseña -->
-                <input class="controls" type="password" name="password" value="" placeholder="Contraseña">
+                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña"> 
                 
-                
-                 <!-- Select -->
+                <!-- Select -->
             <label for="name">Rol a tomar:</label>
             <select name="OS">
                 <option value="1">Productor</option> 
