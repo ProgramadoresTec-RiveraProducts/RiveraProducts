@@ -63,7 +63,7 @@ if(!empty($_SESSION['active']))
             <form action="" method="post">
             <h5>Iniciar Sesión</h5>
             <div class="alert  alert-danger"><?php echo isset($alert) ? $alert : ''; ?></div>
-            <img src="Imagenes\Logo.jpeg">
+            <img src="Imagenes\Logo.png">
                 <!-- NombreUsuario -->
                 <input class="controls" tipe="text" name="usuario" value="" placeholder="Usuario">
         
