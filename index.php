@@ -30,7 +30,7 @@ if(!empty($_SESSION['active']))
                 $_SESSION['active'] = true;
                 $_SESSION['id_usuario'] = $data['id_usuario'];
                 $_SESSION['nombre'] = $data['nombre'];
-                                $_SESSION['apaterno']  = $data['apaterno'];
+                                $_SESSION['apaterno']  = $data['apaternoe'];
                                 $_SESSION['amaterno']  = $data['amaterno'];
                                 $_SESSION['id_rol']    = $data['idrol'];
                 $_SESSION['usuario']   = $data['usuario'];
