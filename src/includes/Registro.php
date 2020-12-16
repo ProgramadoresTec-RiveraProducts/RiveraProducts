@@ -3,11 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Rivera Products</title>
-        <link rel="stylesheet" href="Principal.css">
+        <link rel="stylesheet" href="../css/Principal.css">
     <body>
+        <body background = "../Imagenes/background.png">
         <section class="form-registro">
             <h5>Registro</h5>
-            <img src="Imagenes\LogoRegistro.png" width="100" height="100">
+            <img src="../Imagenes/LogoRegistro.png" width="100" height="100">
             
                 <!-- NombreUsuario -->
                 <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
