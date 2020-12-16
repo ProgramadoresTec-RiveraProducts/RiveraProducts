@@ -116,7 +116,7 @@ if(!empty($_SESSION['active']))
               <div class="card-body">
                 <h3 class="text-center">Calidad</h3>
                 <p>
-                  Nosotros ofrecemos solo la más alta calidad en limon, cosechados con cuidado en la limpieza de la ecología y el ambiente.
+                  Nosotros ofrecemos solo la más alta calidad en limón, cosechados con cuidado en la limpieza de la ecología y el ambiente.
                 </p>
                 <img class="align-self-center" src="../Imagenes/calidadlimon.png" alt="" width="280" height="180">
               </div>
