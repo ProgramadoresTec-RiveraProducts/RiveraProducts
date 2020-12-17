@@ -216,7 +216,7 @@ body{
 @import url('https://fonts.googleapis.com/css?family=Numans');
 
 html,body{
-background: url(/Imagenes/calidad2.png);
+background: url(../Imagenes/calidad2.png);
 background-size: cover;
 background-repeat: no-repeat;
 height: 100%;
