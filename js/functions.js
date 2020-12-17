@@ -27,6 +27,8 @@ function iniciarSesion(){
     // Signed in
     // ...
     console.log("sesion iniciada");
+   
+    
   })
   .catch((error) => {
     var errorCode = error.code;
@@ -40,7 +42,7 @@ function observador(){
 	firebase.auth().onAuthStateChanged((user) => {
   if (user) {
   	console.log("existe usuario activo");
-  	aparece(user);
+  	//aparece(user);
     // User is signed in, see docs for a list of available properties
     // https://firebase.google.com/docs/reference/js/firebase.User
     console.log(".........")
@@ -58,6 +60,7 @@ function observador(){
 }
 function aparece(){
 	if (user.emailVerified) {
+
 			var contenido=document.getElementById("contenido")
 	         contenido.innerHTML=`
      

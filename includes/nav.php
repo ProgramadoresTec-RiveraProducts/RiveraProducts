@@ -1,19 +1,35 @@
-<header>
-  <nav>
-        <ul id="menu">
-          <li><a href="">Inicio</a></li>
-          <li><a href="">Usuarios</a>
-            <ul>
-              <li><a href="">Registrar usuarios</a></li>
-              <li><a href="">Administrar usuarios</a></li>
-            </ul>  
+    <!-- NAVIGATION -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top" id="customNavbar">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="Imagenes/logo.png" width="150">
+          <a/>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle  bg-light-dark text-dark" href="#" id="navbarDropdown" role="button" 
+            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Usuarios
+            </a>
+            <div class="dropdown-menu bg-success" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="login.html">Iniciar Sesión</a>
           </li>
-          <li><a href="">Rendimiento</a></li>
-          <li><a href="">Contacto</a></li>
-          <li><a href="">Cerrar sesion</a></li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#Team">Equipo de Trabajo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#About">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#Contact">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="Registro.html">Registrarse</a>
+          </li>
         </ul>
-</nav>
-  
-</header>
-			
-		
+      </div>
+    </nav>
+    
