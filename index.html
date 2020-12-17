@@ -63,11 +63,13 @@ if(!empty($_SESSION['active']))
   <body>
     <!-- NAVIGATION -->
     <nav class="navbar navbar-expand-lg navbar-light bg-success fixed-top" id="customNavbar">
-      <img src="../Imagenes/logo.png" width="150">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="../Imagenes/logo.png" width="150">
+          <a/>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-    
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item dropdown">
@@ -79,7 +81,13 @@ if(!empty($_SESSION['active']))
               <a class="dropdown-item" href="#">Iniciar Sesión</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link disabled text-dark" href="#">Contacto</a>
+            <a class="nav-link disabled text-dark" href="#Team">Equipo de Trabajo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#About">Acerca de Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled text-dark" href="#Contact">Contacto</a>
           </li>
           <li class="nav-item">
             <a class="nav-link disabled text-dark" href="#">Registrarse</a>
@@ -151,7 +159,7 @@ if(!empty($_SESSION['active']))
     <!-- TEAM -->
     <section class="text-center team">
       <div class="container p-5">
-        <h1 class="text-center text-white font-italic">Equipo de Trabajo</h1>
+        <h1 class="text-center text-white font-italic" id="Team">Equipo de Trabajo</h1>
         <h2 class="text-white text-justify font-italic p-4">
           ¡Contamos con la experiencia en todos los procesos de recepción, selección, empaque y exportación, que nos hacen ser una de las empresas más importantes de la región!
         </h2>
@@ -220,7 +228,7 @@ if(!empty($_SESSION['active']))
                     <a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a>
                   </div>
                   <div class="p-4">
-                    <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.instagram.com/"><i class="fab fa-instagram" id="About"></i></a>
                   </div>
                 </div>
               </div>
@@ -228,6 +236,7 @@ if(!empty($_SESSION['active']))
           </div>
        </div>
       </div>
+      
     </section>
 
 <!-- ABOUT -->
@@ -235,7 +244,7 @@ if(!empty($_SESSION['active']))
   <div class="container">
     <div class="row">
       <div class="m-5">
-        <h1 class="text-center font-italic p-3">Acerca de nosotros</h1>
+        <h1 class="text-center font-italic p-3" >Acerca de nosotros</h1>
         <h5 class="text-justify font-italic">
           Somos una  empresa exportadora de limón persa que se ubica en la carretera federal Martínez de la torre- Nautla, en la comunidad de cañizo sus principales exportaciones son hacia los estados unidos de norte américa exportando limón persa en presentación de 40 y 10 libras. 
 Empezamos  a laborar en el mes de marzo del 2017 y cuenta con 10 empleados de planta y 16 empleados eventuales, la empresa envía a la unión americana la cantidad de 3 embarques por semana generando una derrama económica en la región y además de generar empleos directos e indirectos.
@@ -324,7 +333,7 @@ Empezamos  a laborar en el mes de marzo del 2017 y cuenta con 10 empleados de pl
       <div class="container">
         <div class="row">
           <div class="col-lg-9">
-            <h3>Contact</h3>
+            <h3 id="Contact">Contacto</h3>
             <p>
               Consectetur neque numquam autem animi?
             </p>
