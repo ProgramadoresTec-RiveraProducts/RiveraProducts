@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inicio de Sesión</title>
+    <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
     
 	<!--Custom styles-->
@@ -25,11 +27,10 @@
 				<h3 class=" text-center">Inicio de Sesión</h3>
 			</div>
 			<div class="card-body">
-				<form class="m-1">
+				<div class="m-2">
 					<div class="input-group form-group">
 						<div class="input-group-prepend">
 							<span class="input-group-text"><i class="fas fa-user"></i></span>
-						</div>
 						<input id="emailIS" type="email" class="form-control" placeholder="ingresa email"> 
 						
 					</div>
@@ -38,6 +39,7 @@
 							<span class="input-group-text"><i class="fas fa-key"></i></span>
 						</div>
 						<input id="contraseñaIS" type="password"  class="form-control"placeholder="ingresa contraseña">
+
 					</div>
 					<div class="row align-items-center remember">
 						<input type="checkbox">Remember Me
@@ -46,11 +48,11 @@
 					<button onclick="iniciarSesion()" class="btn float-right login_btn">Iniciar sesion</button> 
 						
 					</div>
-				</form>
+				</div>
 			</div>
 			<div class="card-footer">
 				<div class="d-flex justify-content-center links">
-				¿No tienes una cuenta?<a href="#">Registrate</a>
+				¿No tienes una cuenta?<a href="Registro.html">Registrate</a>
 				</div>
 				<div class="d-flex justify-content-center">
 					<a href="#">¿Olvidaste la contraseña?</a>

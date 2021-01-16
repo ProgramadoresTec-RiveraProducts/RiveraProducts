@@ -1,97 +1,85 @@
-<!--
-$alert = '';
-
-//session_start();
-if(!empty($_SESSION['active']))
-{
-    header('location: sistema/');
-}else{
-
-    if(!empty($_POST))
-    {
-        if(empty($_POST['usuario']) || empty($_POST['contraseña']))
-        {
-            $alert = 'Ingrese su usuario y su calve';
-        }else{
-
-            require_once "conexion.php";
-
-            $user = mysqli_real_escape_string($conection,$_POST['usuario']);
-            $pass = (mysqli_real_escape_string($conection,$_POST['contraseña']));
-
-            $query = mysqli_query($conection,"SELECT * FROM Usuario WHERE usuario= '$user' AND contraseña = '$pass'");
-            mysqli_close($conection);
-            $result = mysqli_num_rows($query);
-
-            if($result > 0)
-            {
-                $data = mysqli_fetch_array($query);
-                $_SESSION['active'] = true;
-                $_SESSION['id_usuario'] = $data['id_usuario'];
-                $_SESSION['nombre'] = $data['nombre'];
-                                $_SESSION['apaterno']  = $data['apaternoe'];
-                                $_SESSION['amaterno']  = $data['amaterno'];
-                                $_SESSION['id_rol']    = $data['idrol'];
-                $_SESSION['usuario']   = $data['usuario'];
-                
-
-                header('location: sistema/');
-            }else{
-                $alert = 'El usuario o la clave son incorrectos';
-                session_destroy();
-            }
-
-
-        }
-
-    }
-}
--->
-
-
 <!doctype html>
     <html larg="en">
     <head>
         <meta charset="utf-8">
         <title>Rivera Products</title>
-        <link rel="stylesheet" href="../css/Principal.css">
+        <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.6.1/firebase-ui-auth.css" />
+     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    
+    <!--Custom styles-->
+    <link rel="stylesheet" type="text/css" href="css/Principal.css">
+    <!--Fontawesome CDN-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    </head>
     <body>
         <body background = "../Imagenes/background.png">
         <section class="form-registro">
             <h5>Registro</h5>
-            <img src="../Imagenes/LogoRegistro.png" width="100" height="100">
+            <img src="Imagenes/LogoRegistro.png" width="100" height="100">
             
                 <!-- NombreUsuario -->
-                <input class="controls" type="text" name="nombre" value="" placeholder="Nombre">
+                <input class="controls" type="text" id="nombre" value="" placeholder="Nombre">
                 <!-- Apellido Paterno -->
-                <input class="controls" type="text" name="apaterno" value="" placeholder="Apellido paterno">
+                <input class="controls" type="text" id="apaterno" value="" placeholder="Apellido paterno">
                 <!-- Apellido Materno-->
-                <input class="controls" type="text" name="amaterno" value="" placeholder="Apellido materno">
+                <input class="controls" type="text" id="amaterno" value="" placeholder="Apellido materno">
                 <!-- Direccion -->
-                <input class="controls" type="text" name="direccion" value="" placeholder="Dirección">
+                <input class="controls" type="text" id="direccion" value="" placeholder="Dirección">
                 <!-- Numero -->
-                <input class="controls" type="tel" pattern="[0-9]" name="telefono" maxlength="10" placeholder="Número de teléfono">
+                <input class="controls" type="tel" pattern="[0-9]" id="telefono" maxlength="10" placeholder="Número de teléfono">
                  <!-- Usuario -->
-                 <input class="controls" type="text" name="nombreUsuario" value="" placeholder="Usuario">
                   <!-- Correo eléctronico -->
-                <input class="controls" type="text" name="correoE" value="" placeholder="Correo eléctronico">
+                <input class="controls" type="text" id="email" value="" placeholder="Correo eléctronico">
                 <!-- Contraseña -->
-                <input class="controls" type="password" name="contraseña" value="" placeholder="Contraseña"> 
+                <input class="controls" type="password" id="contraseña" value="" placeholder="Contraseña"> 
                 
                 <!-- Select -->
             <label for="name">Rol a tomar:</label>
-            <select name="OS">
-                <option value="1">Productor</option> 
-                <option value="2">Usuario</option> 
+            <select id="cargo" name="cargo">
+                <option value="Oficina">Oficina</option> 
+                <option value="Producción">Producción</option> 
+                <option value="Administrador">Administrador</option> 
              </select>
         
                 <!-- Button -->
                 <div class="button-op">
-                    <button type="button" class="button-op1">Registrar</button>
-                    <button type="button" class="button-op2">Ya tengo cuenta</button>
+                    <button  onclick="registrar()" value="" type="button" class="button-op1">Registrar</button>
+                    <button onclick="location.href='login.html'" type="button" class="button-op2">Ya tengo cuenta</button>
                   </div>
         
         </section>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.0/firebase-auth.js"></script>
+<script>
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  var firebaseConfig = {
+    apiKey: "AIzaSyApBD2H3kLnqI9NsiUW_cn60wwzIBwsVSk",
+    authDomain: "riveraproductsapp.firebaseapp.com",
+    databaseURL: "https://riveraproductsapp.firebaseio.com",
+    projectId: "riveraproductsapp",
+    storageBucket: "riveraproductsapp.appspot.com",
+    messagingSenderId: "946098361984",
+    appId: "1:946098361984:web:4f7202bc926da707b2f865",
+    measurementId: "G-QHM8J9JVR9"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var database = firebase.database();
+  firebase.analytics();
+</script>
+<script type="text/javascript" src="js/functions.js"></script>
     </body>
 
 </html>
