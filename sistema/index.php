@@ -73,7 +73,7 @@
                     </tbody>   
                 </table>
             </div>
-           
+           <div id="contenido"><button id="btncerrarS" onclick="cerrarsesion()">cerrar sesion</button></div>
         </div>
     </div>     
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -92,5 +92,6 @@
     <script src="https://cdn.datatables.net/1.10.21/js/dataTables.bootstrap4.min.js"></script>
 
      <script type="text/javascript" src="app.js"></script>
+     <script type="text/javascript" src="js/functions.js"></script>
   </body>
 </html>
